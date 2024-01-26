@@ -1,0 +1,4 @@
+
+- In the main Flask application, `items` and `connections` are passed to the `result.html` template in the `/result` route.
+- Make sure to validate the values of `items` and `connections` to ensure they are in the correct format.
+
