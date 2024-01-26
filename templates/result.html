@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assistant - Result Page</title>
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<h1>Extracted Items and Semantic Connections</h1>
+<div id="items-container"></div>
+<div id="graph-container"></div>
+</body>
+</html>
+
+
+## script.js
+
+javascript
+// Function to create and display the graph
+function createGraph(items, connections) {
+// Create the graph
+var graph = new vis.Graph({
+nodes: nodes,
+edges: edges
+});
+
+// Add the graph to the container
+var container = document.getElementById('graph-container');
+graph.draw(container);
+}
+
+// Function to load the items and create the graph
+window.onload = function() {
+// Get the items and connections from the URL
+var items = window.location.search.substring(1).split('&').map(function(item) { return item.split('=')[1]; });
+var connections = window.location.search.substring(1).split('&').map(function(connection) { return connection.split('=')[1]; });
+
+// Create the graph
+createGraph(items, connections);
+};
+
+
+## Integration with Flask
+
