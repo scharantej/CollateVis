@@ -1,0 +1,4 @@
+
+- Organize the code into separate HTML files and a script file to maintain a modular and maintainable structure.
+
+With these changes, the HTML code seamlessly integrates with the Flask application, allowing users to interact with the web interface, submit the Google Collections URL, and receive the extracted items and semantic connections displayed in a well-designed graph.
